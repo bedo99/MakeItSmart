@@ -51,18 +51,17 @@ const obtieneAmigos = (data) =>{
         
         var informacion = "<img src='img/logoNombreAzul.png' style=' width: 135px; margin: 0px 0px 0px 6px;'>" + doc.data().nombre ;
 
-        var infowindow = new google.maps.InfoWindow({
-            content: informacion
-        });
-
         var pos = { 
             lat: doc.data().coordenadas.latitude,
             lng: doc.data().coordenadas.longitude
         };
 
-        informacion.setPosition(pos);
-        informacion.setContent(infowindow);
-        informacion.open(map);
+        var infowindow = new google.maps.InfoWindow({
+            content: informacion,
+            position: pos
+        });
+
+        infowindow.open(map);
 
     });
 
