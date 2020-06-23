@@ -57,7 +57,8 @@ const obtieneAmigos = (data) =>{
         };
 
         informacion.setPosition(pos);
-        informacion.setContent("<img src='img/logoNombreAzul.png' style=' width: 135px; margin: 0px 0px 0px 6px;'>"+doc.data().nombre);
+        informacion.setContent("<img src='img/logoNombreAzul.png' style=' width: 135px; margin: 0px 0px 0px 6px;'>");
+        informacion.setContent(doc.data().nombre);
         informacion.open(map);
 
     });
