@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <!-- ICONO PESTAÑA PAGINA -->
+    <link rel="Shortcut Icon" href="./img/icon/favicon.ico" type="image/x-icon" />
+    <!-- CSS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- CSS -->
+    <link href="css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html"><img id="logo" src="img/MakeItSmartLogo.png" alt=""></a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link logged-in" href="catalogo.html">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contactanos">Soporte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#makeitsmart">¿Quiénes somos?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link logged-out" href="login.html">Ingresa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link logged-in" href="#" id="salir">Salir</a>
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand logged-in" href="carrito.html"><i class="fas fa-shopping-cart"></i></a>
+    </nav>
+
+    <main class="main-carrito">
+
+        <section class="carrito">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="showcase-left">
+                            <div class="section-title">
+                                <h2>Carrito de compras</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="container">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-4 col-sm-6 col-lg-2" style="text-align: center;">
+                                                    <img id="img-producto" src="./img/dot.png" alt="">
+                                                </div>
+                                                <div class="col-8 col-sm-6 col-lg-5">
+                                                    <ul class="ul-productos">
+                                                        <li class="titulo-producto">Amazon Echo Dot 3</li>
+                                                        <li class="des-producto">Color Negro</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-5 col-sm-6 col-lg-3">
+                                                    <form class="cant-producto" action="">
+                                                        <input type="number" name="cantidad" min="1" max="15" step="1"
+                                                            value="1"><br>
+                                                        <a href="">Eliminar producto</a>
+                                                    </form>
+                                                </div>
+                                                <div class="col-7 col-sm-6 col-lg-2">
+                                                    <div class="precio-producto">
+                                                        <p>$160.00</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-4 col-sm-6 col-lg-2" style="text-align: center;">
+                                                    <img id="img-producto" src="./img/dot.png" alt="">
+                                                </div>
+                                                <div class="col-8 col-sm-6 col-lg-5">
+                                                    <ul class="ul-productos">
+                                                        <li class="titulo-producto">Amazon Echo Dot 3</li>
+                                                        <li class="des-producto">Color Negro</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-5 col-sm-6 col-lg-3">
+                                                    <form class="cant-producto" action="">
+                                                        <input type="number" name="cantidad" min="1" max="15" step="1"
+                                                            value="1"><br>
+                                                        <a href="">Eliminar producto</a>
+                                                    </form>
+                                                </div>
+                                                <div class="col-7 col-sm-6 col-lg-2">
+                                                    <div class="precio-producto">
+                                                        <p>$160.00</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <ul class="totales-ul">
+                                                <li>
+                                                    <p class="totales">Precio Total:<span>$160.00</span></p>
+                                                </li>
+                                                <li>
+                                                    <p class="totales">Envio:<span>$50.00</span></p>
+                                                </li>
+                                                <li>
+                                                    <p class="totales">Total:<span>$210.00</span></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="submit" value="Continuar Compra">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-2">
+            <p><span>© 2020 Copyright: </span> Make It Smart Bajío</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+ <script>
+   // Your web app's Firebase configuration
+   var firebaseConfig = {
+     apiKey: "AIzaSyDecHXcdQjAzH9hZMsGpxCenmR23fvEvcE",
+     authDomain: "makeitsmart-67a1f.firebaseapp.com",
+     databaseURL: "https://makeitsmart-67a1f.firebaseio.com",
+     projectId: "makeitsmart-67a1f",
+     storageBucket: "makeitsmart-67a1f.appspot.com",
+     messagingSenderId: "751030227969",
+     appId: "1:751030227969:web:8a95705a5c2095f2d35c00"
+   };
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+
+   const auth = firebase.auth();
+
+   const db = firebase.firestore();
+
+ </script>
+    
+
+    <script src="https://kit.fontawesome.com/200375b2ae.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="js/principal.js"></script>
+    <script src="js/autorizacion.js"></script>
+</body>
+
+</html>

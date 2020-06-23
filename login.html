@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- ICONO PESTAÑA PAGINA -->
+    <link rel="Shortcut Icon" href="./img/icon/favicon.ico" type="image/x-icon" />
+    <!-- CSS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body>
+
+    <!--Contenido general de la carta-->
+    <div class="cont">
+        <!--Contenido general del Login-->
+        <form class="form sign-in" id="formaingresar">
+            <div class="centrologo">
+                <img src="img/logoNombreAzul.png" height="120px" width="120px">
+            </div>
+            <h2 class="textcolor1">Bienvenido</h2>
+            <label>
+                <span>Correo</span>
+                <input type="email" required id="correo" placeholder="Ingrese su correo electrónico" />
+            </label>
+            <label>
+                <span>Contraseña</span>
+                <input type="password" required id="contrasena" placeholder="Ingrese su contraseña"/>
+            </label>
+            <button type="submit" class="submit">Entrar</button>
+            <button type="submit" onclick="entrarGoogle()" class="google-btn">Entrar con <span>Google</span></button>
+        </form>
+
+        <div class="sub-cont">
+            <!--Contenido general de la imagen deslizante-->
+            <div class="img">
+                <div class="img__text m--up">
+                    <h2>Eres nuevo por aqui?</h2>
+                    <p>Registrate y descubre las grandes oportunidades que tenemos para ti !</p>
+                </div>
+                <div class="img__text m--in">
+                    <h2>Ya formas parte de nuestra Comunidad?</h2>
+                    <p>Si ya tienes una cuenta, solo Entra. Te extrañamos!</p>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">Registrate</span>
+                    <span class="m--in">Login</span>
+                </div>
+            </div>
+
+            <!--Contenido general del Registro-->
+            <form class="form sign-up" id="formaregistrate">
+                <h2 class="textcolor1">Es hora de cambiar tu vida</h2>
+                <label>
+                    <span>Nombre</span>
+                    <input type="text" id="rnombre" required placeholder="Ingrese su nombre completo" />
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" id="rcorreo" required placeholder="Ingrese su correo electrónico"/>
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" id="rcontrasena" required placeholder="Ingrese su contraseña" />
+                </label>
+                <button type="submit" class="submit">Registrarme</button>
+                <button type="submit" onclick="entrarGoogle()" class="google-btn">Registrate con <span>Google</span></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDecHXcdQjAzH9hZMsGpxCenmR23fvEvcE",
+      authDomain: "makeitsmart-67a1f.firebaseapp.com",
+      databaseURL: "https://makeitsmart-67a1f.firebaseio.com",
+      projectId: "makeitsmart-67a1f",
+      storageBucket: "makeitsmart-67a1f.appspot.com",
+      messagingSenderId: "751030227969",
+      appId: "1:751030227969:web:8a95705a5c2095f2d35c00"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+
+    const db = firebase.firestore();
+
+  </script>
+
+    <!-- SCRIPTS -->
+    <script src="js/login.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

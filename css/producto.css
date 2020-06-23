@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: #fff;
+}
+
+/*Nav bar Superior*/
+
+#logo {
+  width: 6vh !important;
+}
+
+nav {
+  box-shadow: 0px -4px 19px -2px rgba(0,0,0,0.75);
+  z-index: 3;
+  font-weight: 800;
+}
+
+main {
+  padding-top: 120px;
+  min-height: 93vh;
+}
+
+/*Section Product*/
+
+.nombre-producto {
+  text-align: center;
+}
+
+.data-title {
+  font-size: 100px;
+  margin-bottom: .5rem;
+}
+
+.prod1{
+  background-color: #727172 ;
+}
+
+.prod2{
+  background-color: teal;
+}
+
+.prod3{
+  background-color: #7085A1;
+}
+
+.product-type {
+  font-weight: 700;
+}
+
+.button{
+  height: 20px;
+  border-radius: 34px;
+  width: 20px;
+  margin: 10px 6px 0 0;
+}
+
+.product-text-description {
+  color: #86888b;
+  font-weight: 600;
+}
+
+.descripcion {
+  margin-top: 70px;
+  padding: 0px 40px 20px 40px;
+}
+
+.producto-fondo {
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../img/logotipo.png");
+
+  background-size: 480px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+.product-text-description a {
+  color: #000;
+  font-weight: 900;
+}
+
+.product-model {
+  font-weight: 700;
+}
+
+.descripcion input[type="submit"] {
+  color: #fff;
+  font-weight: 600;
+  background: #334255;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 35px;
+}
+
+/*ESTILO FOOTER*/
+
+footer {
+  text-align: center;
+  padding: 0;
+  box-shadow: -1px 23px 40px -6px rgba(0,0,0,0.75); 
+}
+
+footer .footer-2 {
+  text-align: center;
+  background: #334255;
+  color: #fff;
+  padding: 4px 0 !important;
+  font-weight: 900;
+}
+
+footer .footer-2 p {
+  padding: 18px 0 0 0 !important;
+}
+
+footer .footer-2 span {
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  margin-right: 2px;
+}
+
+/*RESPONSIVE*/
+
+
+
+@media (max-width:991px){
+  nav a img {
+    display: none;
+  }
+}
+
+@media (max-width:800px){
+  main {
+    padding-top: 120px;
+  }
+
+  .data-title {
+    font-size: 50px;
+  }
+
+  .producto {
+    margin-top: 10px;
+  }
+
+  .nombre-producto span {
+    font-size: 50px;
+  }
+}
+
+@media (max-width:550px){
+  main {
+    padding-top: 65px;
+  }
+}

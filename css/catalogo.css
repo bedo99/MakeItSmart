@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif !important;
+  background: rgb(250, 250, 250);
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/Captura.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/*ESTILOS NAVBAR*/
+
+#logo {
+  width: 6vh !important;
+}
+
+nav {
+  box-shadow: 0px -4px 19px -2px rgba(0,0,0,0.75);
+  z-index: 3;
+  font-weight: 800;
+}
+
+/*ESTILOS PLANES*/
+
+.planes {
+  padding: 40px 0;
+}
+
+.stacked-cards {
+  padding: 40px 0 20px 0;
+}
+
+.planes .stacked-cards li {
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 60px;
+  box-shadow: 0 3px 6px 0px #333;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  transition: 0.4s ease transform;
+  height: 580px;
+  width: 400px;
+  background: #7085A1;
+}
+
+.planes .numero-plan {
+  font-size: 47px;
+  padding: 15px 0px 0px 27px;
+  font-weight: 500;
+  margin: 0;
+  color: #fff;
+}
+
+.planes img {
+  width: 85%;
+  margin: 20px 35px;
+}
+
+.planes .precio {
+  display: inline-flex;
+  font-size: 35px;
+  margin: 0px 0px 0px 50px;
+  color: #fff;
+}
+
+.planes #botonadd{
+  background: #334255;
+  margin: 0px 0px 0 46px;
+  padding: 0px 33px;
+  font-size: 32px;
+  border-radius: 40px;
+  display: list-item;
+}
+
+.planes a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/*ESTILOS BUSCADOR*/
+
+.buscador input[type="text"] {
+  font-size: 25px;
+  font-weight: 900;
+  color: #fff !important;
+}
+
+.buscador .searchbar{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 90px;
+  background-color: #353b48;
+  border-radius: 60px;
+  padding: 30px;
+  color: #fff;
+}
+
+.buscador .search_input{
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color:transparent;
+  line-height: 20px;
+  transition: width 0.4s linear;
+  color: #fff;
+}
+
+.buscador .searchbar:hover > .search_input{
+  padding: 0 10px;
+  width: 450px;
+  caret-color:rgb(255, 255, 255);
+  transition: width 0.4s linear;
+}
+
+.buscador .searchbar:hover > .search_icon{
+  background: white;
+  color: #e74c3c;
+  margin-top: -25px;
+}
+
+.buscador .search_icon{
+  height: 80px;
+  width: 80px;
+  margin-top: -25px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80%;
+  color:white;
+  text-decoration:none;
+}
+
+.buscador h1 {
+  text-align: center;
+  font-size: 60px;
+}
+  
+.buscador h2{
+  text-align: center;
+  font-size: 30px;
+  color: #ccc;
+}
+
+/*ESTILOS PRODUCTO*/
+
+.productos {
+  padding: 70px 0 0 0;
+}
+
+button{
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+}
+  
+h3 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.productos .card {
+  border-radius: 15px;
+  box-shadow: 0px 10px 24px -8px rgba(0,0,0,0.75);
+}
+
+.productos .card .container{
+  height: 120px;
+}
+
+.productos .card-head {
+  position: relative;
+  height: 250px;
+  background: #334255;
+  border-radius: 15px 15px 0 0;
+}
+
+.productos .card-head .card-logo {
+  width: 90px;
+  margin: 5px 0 0 35px
+}
+
+.productos h2 {
+  font-size: 18px;
+  margin: 15px 0px 0 0px;
+  color: #fff;
+}
+
+.productos .product-img {
+  position: absolute;
+  left: 0;
+  width: 80%;
+  margin: -50px 0px 0 105px;
+}
+
+.productos .new {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  background: #11e95b;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.productos .product-des {
+  padding: 0px 4px;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: justify;
+  text-transform: uppercase;
+  color: #344255;
+  margin: 12px 0 0 0px;
+}
+
+.productos .product-rating {
+  padding: 0 4px;
+  font-size: 15px;
+}
+
+.productos .product-rating i.grey {
+  color: #acacab;
+}
+
+
+.productos .product-price { 
+  background: #11e95b;
+  padding: 7px 4px;
+  font-size: 23px;
+  color: #fff;
+  border-radius: 7px;
+  box-shadow: -10px 20px 15px -10px rgba(17, 233, 91, 0.3);
+}
+
+.productos .product-price b {
+  margin-left: 5px;
+}
+
+.productos #boton{
+  text-align: right;
+  background: #334255;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 11px;
+  font-weight: 700;
+}
+
+/*ESTILOS FOOTER*/
+
+footer {
+  text-align: center;
+  padding: 0;
+  box-shadow: -1px 23px 40px -6px rgba(0,0,0,0.75); 
+}
+
+footer .footer-2 {
+  text-align: center;
+  background: #334255;
+  color: #fff;
+  padding: 4px 0 !important;
+  font-weight: 900;
+}
+
+footer .footer-2 p {
+  padding: 18px 0 0 0 !important;
+}
+
+footer .footer-2 span {
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  margin-right: 2px;
+}
+
+@media (max-width:991px){
+  nav a img {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .planes {
+    padding: 40px 0 0 0;
+  }
+
+  .buscador .searchbar:hover > .search_input {
+    width: 225px !important;
+  }
+  
+  .stacked-cards {
+    padding: 40px 0 20px 0;
+  }
+  
+  .planes .stacked-cards li {
+    border-radius: 25px !important;
+    height: 220px !important;
+    width: 144px !important;
+  }
+
+  .planes .numero-plan {
+    font-size: 22px !important;
+  }
+
+  .planes img {
+    width: 75% !important;
+    margin: 6px 24px !important;
+  }
+
+  .planes .precio {
+    font-size: 15px !important;
+    margin: 0px 0px 0px 20px !important;
+  }
+
+
+  .planes .precio p {
+    margin: 0;
+  }
+
+  
+  .planes #botonadd{
+    margin: 3px 0px 0 17px;
+    padding: 0px 9px;
+    font-size: 18px;
+  }
+
+  .productos .product-img {
+    width: 70%;
+  }
+  .productos{
+    padding: 0px;
+  }
+}
