@@ -49,7 +49,11 @@ const obtieneAmigos = (data) =>{
 
     data.forEach( doc => {
         
-        informacion = new google.maps.InfoWindow;
+        var informacion = "<img src='img/logoNombreAzul.png' style=' width: 135px; margin: 0px 0px 0px 6px;'>" + doc.data().nombre ;
+
+        var infowindow = new google.maps.InfoWindow({
+            content: informacion
+        });
 
         var pos = { 
             lat: doc.data().coordenadas.latitude,
@@ -57,8 +61,7 @@ const obtieneAmigos = (data) =>{
         };
 
         informacion.setPosition(pos);
-        informacion.setContent("<img src='img/logoNombreAzul.png' style=' width: 135px; margin: 0px 0px 0px 6px;'>");
-        informacion.setContent(doc.data().nombre);
+        informacion.setContent(infowindow);
         informacion.open(map);
 
     });
