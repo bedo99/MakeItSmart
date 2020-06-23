@@ -21,7 +21,6 @@ auth.onAuthStateChanged(user =>{
 
         db.collection('Usuarios').onSnapshot(snapshot =>{
             obtieneAmigos(snapshot.docs);
-            configuraMenu(user);
         }, err => {
             console.log(err.message);
         });
@@ -31,7 +30,6 @@ auth.onAuthStateChanged(user =>{
     else{
         console.log('Usuario salió');
         obtieneAmigos([]);
-        configuraMenu();
     }
 
 });
@@ -59,7 +57,7 @@ const obtieneAmigos = (data) =>{
         };
 
         informacion.setPosition(pos);
-        informacion.setContent("<img src='img/logoNombreAzul.png' style=' width: 135px; margin: 0px 0px 0px 6px;'>",doc.data().nombre);
+        informacion.setContent("<img src='img/logoNombreAzul.png' style=' width: 135px; margin: 0px 0px 0px 6px;'>"+doc.data().nombre);
         informacion.open(map);
 
     });
