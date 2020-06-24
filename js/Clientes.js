@@ -43,7 +43,7 @@ const obtieneAmigos = (data) =>{
         zoom: 14 
     }
 
-    var mapa =  document.getElementById("map")
+    var mapa =  document.getElementById("mapacliente")
     var map = new google.maps.Map(mapa, propiedades);
 
 
