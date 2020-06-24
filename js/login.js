@@ -17,7 +17,11 @@ formaregistrate.addEventListener('submit',(e)=>{
         
         return db.collection('Usuarios').doc(cred.user.uid).set({
             nombre: formaregistrate['rnombre'].value,
-            estatus: "0"
+            estatus: "0",
+            coordenadas : {
+                latitude : 0,
+                longitude : 0
+            }
         }).then(() => {
             
             window.document.location = './index.html';
