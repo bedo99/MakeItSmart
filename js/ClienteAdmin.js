@@ -52,3 +52,13 @@ const obtieneAmigos = (data) =>{
 
 
  };
+
+ const salir = document.getElementById('salir');
+
+salir.addEventListener('click', (e)=>{
+    e.preventDefault();
+    auth.signOut().then(()=>{
+        return window.document.location = './index.html';
+    });
+
+});
