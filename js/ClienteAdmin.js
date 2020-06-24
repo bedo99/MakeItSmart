@@ -32,6 +32,7 @@ const obtieneAmigos = (data) =>{
 
 
     data.forEach( doc => {
+        console.log(doc);
         
         var informacion = "<img src='../img/MakeItSmartLogo.png' style=' width: 50px; margin: 0px 0px 0px 6px;'>"+ "<br><strong>Cliente:</strong>" + doc.data().nombre;
 
