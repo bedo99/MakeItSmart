@@ -37,13 +37,25 @@ formaingresar.addEventListener('submit',(e)=>{
 
     auth.signInWithEmailAndPassword(correo,contrasena).then( cred =>{
 
-        console.log(cred);
+        const id = cred.user.uid;
+        console.log(id);
 
+        db.collection('Usuarios').doc(id).get().then(datos =>{
+            if(datos.data().estatus == "0"){
+                return window.document.location = './index.html';
+            }
+            else{
+                return window.document.location = './Admin/index.html';
+            }
+        }, err => {
+            console.log(err.message);
+        });
+       
         //window.document.location = './index.html';
         formaingresar.reset();
-        formaingresar.querySelector('.error').innerHTML = '';
+        
     }).catch( err => {
-        formaingresar.querySelector('.error').innerHTML = mensajeError(err.code);
+        
         console.log(err);
     });
     
