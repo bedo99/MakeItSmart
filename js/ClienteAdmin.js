@@ -63,7 +63,7 @@ const obtieneAmigos = (data) =>{
             position: pos
         });
 
-        infowindow.open(map);
+        //infowindow.open(map);
 
         marcadores.push(infowindow);
         
@@ -73,7 +73,7 @@ const obtieneAmigos = (data) =>{
     var markerCluster = new MarkerCluster(map, marcadores,
         {
             imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
-            gridSize: 60,
+            gridSize: 30,
             zoomOnClick: true,
             maxZoom: 10
         }
