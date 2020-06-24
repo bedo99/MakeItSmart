@@ -63,7 +63,7 @@ const obtieneAmigos = (data) =>{
             position: pos
         });
 
-        infowindow.open(map);
+        //infowindow.open(map);
         marcadores.push(infowindow);
         
 
