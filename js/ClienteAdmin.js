@@ -43,7 +43,8 @@ const obtieneAmigos = (data) =>{
         };
 
         var infowindow = new google.maps.InfoWindow({
-            content: informacion
+            content: informacion,
+            position: pos
         });
 
         infowindow.open(map);
