@@ -67,7 +67,7 @@ const obtieneAmigos = (data) =>{
 
         marcadores.push(infowindow);
 
-        marcadores.addListener('click', function() {
+        infowindow.addListener('click', function() {
             infowindow.open(map);
         });
         
