@@ -68,7 +68,7 @@ const obtieneAmigos = (data) =>{
 
     });
 
-    markerCluster = new MarkerClusterer(map, marcadores,
+    var markerCluster = new markerCluster(map, marcadores,
         {
             imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
             gridSize: 60,
