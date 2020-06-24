@@ -45,6 +45,7 @@ const obtieneAmigos = (data) =>{
     var mapacliente =  document.getElementById("mapacliente")
     var map = new google.maps.Map(mapacliente, propiedades);
 
+    var marcadores = [];
 
     data.forEach( doc => {
 
@@ -61,9 +62,19 @@ const obtieneAmigos = (data) =>{
             position: pos
         });
 
+        marcadores.push(infowindow);
         infowindow.open(map);
 
     });
+
+    var markerCluster = new MarkerClusterer(map, marcadores,
+        {
+            imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
+            gridSize: 60,
+            zoomOnClick: true,
+            maxZoom: 10
+        }
+    );
 
 
 
