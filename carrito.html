@@ -66,61 +66,10 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="container">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <div class="row">
-                                                <div class="col-4 col-sm-6 col-lg-2" style="text-align: center;">
-                                                    <img id="img-producto" src="./img/dot.png" alt="">
-                                                </div>
-                                                <div class="col-8 col-sm-6 col-lg-5">
-                                                    <ul class="ul-productos">
-                                                        <li class="titulo-producto">Amazon Echo Dot 3</li>
-                                                        <li class="des-producto">Color Negro</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-5 col-sm-6 col-lg-3">
-                                                    <form class="cant-producto" action="">
-                                                        <input type="number" name="cantidad" min="1" max="15" step="1"
-                                                            value="1"><br>
-                                                        <a href="">Eliminar producto</a>
-                                                    </form>
-                                                </div>
-                                                <div class="col-7 col-sm-6 col-lg-2">
-                                                    <div class="precio-producto">
-                                                        <p>$160.00</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="row">
-                                                <div class="col-4 col-sm-6 col-lg-2" style="text-align: center;">
-                                                    <img id="img-producto" src="./img/dot.png" alt="">
-                                                </div>
-                                                <div class="col-8 col-sm-6 col-lg-5">
-                                                    <ul class="ul-productos">
-                                                        <li class="titulo-producto">Amazon Echo Dot 3</li>
-                                                        <li class="des-producto">Color Negro</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-5 col-sm-6 col-lg-3">
-                                                    <form class="cant-producto" action="">
-                                                        <input type="number" name="cantidad" min="1" max="15" step="1"
-                                                            value="1"><br>
-                                                        <a href="">Eliminar producto</a>
-                                                    </form>
-                                                </div>
-                                                <div class="col-7 col-sm-6 col-lg-2">
-                                                    <div class="precio-producto">
-                                                        <p>$160.00</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <ul class="list-group list-group-flush" id="carrito"></ul>
                                     <div class="row">
                                         <div class="col-12">
-                                            <ul class="totales-ul">
+                                            <ul class="totales-ul" id="totales">
                                                 <li>
                                                     <p class="totales">Precio Total:<span>$160.00</span></p>
                                                 </li>
@@ -181,6 +130,8 @@
  </script>
     
     <script src="js/Clientes.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/loggedOut.js"></script>
 
     <script src="https://kit.fontawesome.com/200375b2ae.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
