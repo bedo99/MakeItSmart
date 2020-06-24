@@ -1,21 +1,9 @@
-const salir = document.getElementById('salir');
-
-salir.addEventListener('click', (e)=>{
-    e.preventDefault();
-    auth.signOut().then(()=>{
-        return window.document.location = '../index.html';
-    });
-
-});
-
-
 auth.onAuthStateChanged(user =>{
  
     if(user){
         console.log('Usuario entró');
 
         db.collection('Usuarios').onSnapshot(snapshot =>{
-            console.log(snapshot.docs);
             obtieneAmigos(snapshot.docs);
         }, err => {
             console.log(err.message);
@@ -39,8 +27,8 @@ const obtieneAmigos = (data) =>{
         zoom: 14 
     }
 
-    var mapa =  document.getElementById("mapacliente")
-    var map = new google.maps.Map(mapa, propiedades);
+    var mapacliente =  document.getElementById("mapacliente")
+    var map = new google.maps.Map(mapacliente, propiedades);
 
 
     data.forEach( doc => {
@@ -65,3 +53,12 @@ const obtieneAmigos = (data) =>{
 
  };
 
+const salir = document.getElementById('salir');
+
+salir.addEventListener('click', (e)=>{
+    e.preventDefault();
+    auth.signOut().then(()=>{
+        return window.document.location = '../index.html';
+    });
+
+});
