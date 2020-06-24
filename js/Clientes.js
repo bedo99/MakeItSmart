@@ -49,7 +49,7 @@ const obtieneAmigos = (data) =>{
 
     data.forEach( doc => {
         
-        var informacion = "<img src='img/logoNombreAzul.png' style=' width: 50px; margin: 0px 0px 0px 6px;'>"+ "<br><strong>Cliente:</strong>" + doc.data().nombre;
+        var informacion = "<img src='../img/logoNombreAzul.png' style=' width: 50px; margin: 0px 0px 0px 6px;'>"+ "<br><strong>Cliente:</strong>" + doc.data().nombre;
 
         var pos = { 
             lat: doc.data().coordenadas.latitude,
