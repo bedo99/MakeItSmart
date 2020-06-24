@@ -16,8 +16,10 @@ formaregistrate.addEventListener('submit',(e)=>{
         
         
         return db.collection('Usuarios').doc(cred.user.uid).set({
-            nombre: formaregistrate['rnombre'].value
+            nombre: formaregistrate['rnombre'].value,
+            estatus: "0"
         }).then(() => {
+            
             window.document.location = './index.html';
         });
         
@@ -34,7 +36,10 @@ formaingresar.addEventListener('submit',(e)=>{
     let contrasena = formaingresar['contrasena'].value;
 
     auth.signInWithEmailAndPassword(correo,contrasena).then( cred =>{
-        window.document.location = './index.html';
+
+        console.log(cred);
+
+        //window.document.location = './index.html';
         formaingresar.reset();
         formaingresar.querySelector('.error').innerHTML = '';
     }).catch( err => {
