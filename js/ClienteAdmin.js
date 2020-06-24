@@ -52,23 +52,26 @@ const obtieneAmigos = (data) =>{
         
         var informacion = "<img src='../img/MakeItSmartLogo.png' style=' width: 50px; margin: 0px 0px 0px 6px;'>"+ "<br><strong>Cliente:</strong>" + doc.data().nombre;
 
+        var infowindow = new google.maps.InfoWindow({
+            content: informacion
+        });
+
         var pos = { 
             lat: doc.data().coordenadas.latitude,
             lng: doc.data().coordenadas.longitude
         };
 
-        var infowindow = new google.maps.Marker({
+        var marker = new google.maps.Marker({
             map: map,
-            content: informacion,
             position: pos
         });
 
         //infowindow.open(map);
 
-        marcadores.push(infowindow);
+        marcadores.push(marker);
 
-        infowindow.addListener('click', function() {
-            infowindow.open(map);
+        marker.addListener('click', function() {
+            infowindow.open(map,marker);
         });
         
 
