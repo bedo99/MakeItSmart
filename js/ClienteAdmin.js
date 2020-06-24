@@ -57,7 +57,7 @@ const obtieneAmigos = (data) =>{
             lng: doc.data().coordenadas.longitude
         };
 
-        var infowindow = new google.maps.InfoWindow({
+        var infowindow = new google.maps.Marker({
             map: map,
             content: informacion,
             position: pos
