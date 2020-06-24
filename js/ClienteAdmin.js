@@ -64,7 +64,7 @@ const obtieneAmigos = (data) =>{
         });
 
         marcadores.push(infowindow);
-        infowindow.open(map);
+        //infowindow.open(map);
 
     });
 
