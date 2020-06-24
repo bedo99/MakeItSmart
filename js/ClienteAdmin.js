@@ -57,17 +57,18 @@ const obtieneAmigos = (data) =>{
             lng: doc.data().coordenadas.longitude
         };
 
-        var infowindow = new google.maps.InfoWindow({
+        var infowindow = new google.maps.Marker({
+            map: map,
             content: informacion,
             position: pos
         });
 
         marcadores.push(infowindow);
-        infowindow.open(map);
+        //infowindow.open(map);
 
     });
 
-    var markerCluster = new MarkerClusterer(map, marcadores,
+    markerCluster = new MarkerClusterer(map, marcadores,
         {
             imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
             gridSize: 60,
