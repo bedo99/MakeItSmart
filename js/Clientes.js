@@ -18,18 +18,9 @@ auth.onAuthStateChanged(user =>{
             });
         }
 
-
-        db.collection('Usuarios').onSnapshot(snapshot =>{
-            obtieneAmigos(snapshot.docs);
-        }, err => {
-            console.log(err.message);
-        });
-
-
     }
     else{
         console.log('Usuario salió');
-        obtieneAmigos([]);
     }
 
 });
