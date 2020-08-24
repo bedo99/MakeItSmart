@@ -35,17 +35,6 @@ auth.onAuthStateChanged( user =>{
 
 });
 
-const salir = document.getElementById('salir');
-
-salir.addEventListener('click', (e)=>{
-    e.preventDefault();
-    auth.signOut().then(()=>{
-        return window.document.location = './index.html';
-    });
-
-});
-
-
 const ListaProductos = document.getElementById('ListaProductos');
 
 const obtieneProductos = (data) =>{
@@ -88,14 +77,16 @@ const obtieneProductos = (data) =>{
                                 </p>
                             </div>
                             <div class="col-5 mt-3">
-                                <button id="boton"> Add to cart</button>
+                                <button id="boton" onclick="addToCart('${doc.id}', '${producto.nombre}',
+                                '${producto.descripcion}', '${producto.imagen}', '${producto.precio}')">
+                                    Add to cart
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             `;
-    
             html += columna;
     
         });
@@ -106,11 +97,4 @@ const obtieneProductos = (data) =>{
     else{
         ListaProductos.innerHTML = '<p class="text-center">Ingrese con sus claves para ver los productos.</p>';
     }
-
-
-
-
  };
-
-    
-
