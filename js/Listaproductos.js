@@ -13,6 +13,13 @@ const configuraMenu = (user) => {
     }
 }
 
+db.collection('ProductosMakeitSmart').onSnapshot(snapshot =>{
+    obtieneProductos(snapshot.docs);
+    configuraMenu(user);
+}, err => {
+    console.log(err.message);
+});
+
 auth.onAuthStateChanged( user =>{
  
     if(user){
